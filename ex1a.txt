@@ -1,0 +1,14 @@
+<!Doctype html>
+<html>
+<head>
+<title>College Website</title>
+</head>
+<body>
+<h2 style="display:inline">Home link:</h2>
+<a href="https://adityauniversity.in/" target="_main">View Home page</a><br><br>
+<h2 style="display:inline">Courses:</h2>
+<a href="https://adityauniversity.knimbus.com/portal/v2/default/home">View courses</a><br>
+<h2 style="display:inline">Stats:</h2>
+<a href="https://adityauniversity.in/opportunities-placements" target="_main">View stats</a>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>7C</title>
+ </head>
+<body>
+ 
+	<h1 >Array Object Demo(24B11CS002)</h1>
+
+        <div id="output"></div>
+ 
+	<Script>
+	
+		let fruits=["Apple","Banana","Mango"];
+ 		let length= fruits.length;
+		fruits.push("Orange");
+		fruits.unshift("Grapes");
+		let last= fruits.pop();
+		let first=fruits.shift();
+		let sorted=fruits.sort();
+		let joined=fruits.join(", ");
+
+
+		document.getElementById("output").innerHTML=
+
+		"<b> Original Length  :</b> " + length + "<br>" +
+		"<b> After Push & Unshift  :</b> Apple, Banana, Mango, Orange, Grapes <br>"+
+		"<b> Removed First: </b>" + first + "<br>" +
+		"<b>Removed Last  : </b>" + last + "<br>" +
+		"<b>sorted Array : </b>" + sorted + "<br>" +
+		"<b>Joined As String : </b>" + joined + "<br>"   ;
+	</script>
+</body>
+</html>

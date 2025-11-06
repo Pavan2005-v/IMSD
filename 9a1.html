@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>factorial using function</title>
+</head>
+<body>
+<h2> find factorial of number</h2>
+<script>
+function factorial(num){
+let fact=1;
+for(let i=1;i<=num;i++){
+fact*=i;
+}
+return fact;
+}
+
+//taking input from user
+ let number=parseInt(prompt("Enter a number:"));
+
+//calling function and displaying result
+let result=factorial(number);
+document.write("Factoriaal of " + number + " is " + result);
+</script>
+</body>
+</html>

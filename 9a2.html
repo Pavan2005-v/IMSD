@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Fibonacci Series using Function</title>
+</head>
+<body>
+<h2>Find Fibonacci Series of a Number</h2>
+
+<!-- Input field for user -->
+<label>Enter number of terms: </label>
+<input type="number" id="numberInput">
+<button onclick="showFibonacci()">Show Series</button>
+
+<!-- Result area -->
+<div id="result" style="margin-top:10px;"></div>
+
+<script>
+function showFibonacci() {
+    // Get the input value and convert it to integer
+    const num = parseInt(document.getElementById('numberInput').value);
+
+    // Validate input
+    if (isNaN(num) || num < 0) {
+        document.getElementById('result').innerHTML = "Please enter a valid non-negative number.";
+        return;
+    }
+
+    // Initialize first two terms of Fibonacci sequence
+    let fib = [0, 1];
+
+    // Generate Fibonacci terms up to 'num'
+    for (let i = 2; i < num; i++) {
+        fib[i] = fib[i - 1] + fib[i - 2];
+    }
+
+    // Display the result
+    document.getElementById('result').innerHTML =
+        `Fibonacci series up to ${num} terms:<br>${fib.slice(0, num).join(', ')}`;
+}
+</script>
+</body>
+</html>

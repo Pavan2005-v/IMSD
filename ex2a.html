@@ -1,0 +1,30 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<title>Window Objects</title>
+</head>
+<body>
+<button onclick="windowInfo()">Window information</button>
+<button onclick="openWindow()">Open Window</button>
+<button onclick="closeWindow()">Close Window</button>
+<div id="output"></div>
+<script>
+let newWin;
+function windowInfo(){
+let height=window.innerHeight;
+let width=window.innerWidth;
+let location=window.location.href;
+document.getElementById("output").innerHTML=
+"<b>Height:</b>"+height+"px<br>"+
+"<b>Widht:</b>"+width+"px<br>"+
+"<b>Location:</b>"+location;
+}
+function openWindow(){
+newWin=window.open("https://www.google.com" ,"Example" ,"height=200 width=200");}
+function closeWindow(){
+if(newWin){
+newWin.close();
+}}
+</script>
+</body>
+</html>

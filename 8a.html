@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Larger number finder</title>
+<script>
+function findLargerNumber(){
+let num1=parseInt(prompt("enter first integer:"));
+let num2=parseInt(prompt("enter second integer:"));
+let num3=parseInt(prompt("enter third integer:"));
+
+let message="";
+
+if(num1===num2 && num2===num3){
+message="Equal Numbers";
+} else{
+let largest=Math.max(num1,num2,num3);
+message=largest + " Larger Number";
+}
+alert(message);
+}
+</script>
+</head>
+<body onload="findLargerNumber()">
+<h2> 24B11CS002 <h2>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>6B</title>
+</head>
+<body>
+<h1>Different ways to display output (24B11CS002)</h1>
+	<button onclick="showAlert()">Show Alert </button>
+	<button onclick="logtoconsole()">Log to Console </button>
+	<button onclick="writetodocument()">Write to Document </button>
+	<button onclick="updateDom()">Update DOM </button>
+
+	<div id="output Area">output will be appeared here</div>
+<script>	
+	function showAlert()
+	{
+	   alert("This is an alert message");
+	}
+	function logtoconsole()
+	{
+	   console.log("This is a console message");
+	}
+	function writetodocument()
+	{
+	   document.write("This is a write message");
+	}
+	function updateDom()
+	{
+	   document.getElementById("output Area").innerText="This text was inserted using DOM manipulation";
+	}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<html>
+<head>
+	<title>Contact us Page</title>
+	<script type="text/javascript">
+		//Validation for fields
+		function validation(){
+			var nm=document.getElementById("name_id").value;
+			var em=document.getElementById("email_id").value;
+			var su=document.getElementById("subject_id").value;
+			var me=document.getElementById("message_id").value;
+			if(nm=="" && em=="" && su=="" && me=="")
+			{
+				alert("Please enter all fields");
+				return false;
+			}			
+			else if(nm=="")
+			{
+				alert("Enter Name");
+				return false;
+			}
+			else if(nm.length<4)
+			{
+				alert("Name should not be below 6 character");
+				return false;
+			}
+			else if(em=="")
+			{
+				alert("Enter Email");
+				return false;
+			}
+			else if(!/^[A-z0-9]{6,}[@][A-z]{4,5}[.][A-z]{3}$/.test(em))
+			{
+				alert("Enter valid Email ID");
+				return false;
+			}
+			else if(su=="")
+			{
+				alert("Enter Subject");
+				return false;
+			}
+			else if(me=="")
+			{
+				alert("Enter message");
+				return false;
+			}
+
+			else if(ms.length<=20)
+			{
+				alert("message should below 20 characters ");
+				return false;
+			}
+			else{
+				return true;
+			}
+		}
+		
+	</script>
+</head>
+<form onSubmit="return validation()" action="registration_app.php" method="POST">
+	<table align="center">
+		<tr>
+			<td colspan="2"><h2>Contact us (24B11CS002N)</h2></td>
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td><input type="text" name="name" id="name"/></td>
+		</tr>
+		<tr>
+			<td>Email ID</td>
+			<td><input type="text" name="email" id="email_id" /></td>
+		</tr>
+		<tr>
+			<td>Password</td>
+			<td><input type="password" name="password" id="password_id" /></td>
+		</tr>
+		<tr>
+			<td>Phone number</td>
+			<td><input type="text" name="phone" id="phone" /></td>
+		</tr>
+
+		<tr>
+			<td>Address</td>
+			<td><textarea name="address" id="address"></textarea></td>
+		</tr>		
+		<tr>
+			<td></td>
+			<td><input type="submit" value="SUBMIT" /><input type="reset" value="CLEAR" /></td>
+		</tr>
+	</table>
+</form>
+</html>

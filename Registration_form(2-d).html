@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+        <title>REGISTRATION FORM</title>
+    
+</head>
+	<body bgcolor="lightgreen" >
+	<center>
+	    		<h2>24B11CS002<h2>
+		<h2 align="center"> Student Registration Form</h2>
+		
+		<form method="post" action="#">
+
+			<table border="1" align="center" cellpadding="10" cellspacing="0">
+
+				<tr>
+					<td> <label for="fname"> First Name: </label></td>
+					<td> <input type="text" id="fname" name="fname" required> </td>
+				</tr>
+				<tr>
+					<td> <label for="lname"> Larst Name: </label></td>
+					<td> <input type="text" id="lname" name="lname" required> </td>
+				</tr>
+				<tr>
+					<td> <label for="password"> Password: </label></td>
+					<td> <input type="password" id="password" name="password" required> </td>
+				</tr>
+				<tr>
+					<td> <label for="age"> Age: </label></td>
+					<td> <input type="number" id="age" name="age" min="0" max="100" required> </td>
+				</tr>
+				<tr>
+					<td> <label for="dob"> Date Of Birth: </label></td>
+					<td> <input type="date" id="dob" name="dob" required> </td>
+				</tr>
+				<tr>
+					<td> Gender: </td>
+					<td> 
+						<input type="radio" id="male" name ="gender" value="male"> 
+						<label for="male"> Male </label>
+						<input type="radio" id="female" name ="gender" value="female"> 
+						<label for="female"> Female </label>	
+					</td>
+				</tr>
+				<tr>
+					<td> Languages Known: </td>
+					<td> 
+						<input type="checkbox" id="english" name ="language" value="English"> 
+						<label for="english"> English </label>
+						<input type="checkbox" id="telugu" name ="language" value="Telugu"> 
+						<label for="telugu"> Telugu </label>
+						<input type="checkbox" id="hindi" name ="language" value="hindi"> 
+						<label for="hindi"> Hindi </label>
+							
+					</td>
+				</tr>
+				<tr>
+					<td> <label for="course"> Course: </label></td>
+					<td> 
+						<select id="course" name="course">
+							<option value="">--Select--</option>
+							<option value="B.Tech">B.Tech</option>
+							<option value="M.Tech">M.Tech</option>
+							<option value="MCA">MCA</option>
+							<option value="MBA">MBA</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td> <label for="address"> Address: </label></td>
+					<td> <textarea id="dob" name="address" rows="4" cols="30"> </textarea> </td>
+				</tr>
+			
+				<tr>
+					<td colspan="2" align="center">  
+						<input type="submit"  value="Submit"> 
+						<input type="reset"  value="Reset"> 
+							
+					</td>
+				</tr>
+			</table>
+
+		</form>
+	</center>
+	</body>
+</html>

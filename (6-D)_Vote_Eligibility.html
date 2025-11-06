@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title>6D</title>
+	<style>
+	  body{ font-family: Arial, sans-serif; padding: 20px;}
+	  table {
+	     border-collapse: collapse;
+	     width: 50%;
+	     margin-top: 20px;   
+		}
+	th,td {
+	     padding: 10px;
+	     border: 1px solid #333;
+	     text-align:center;
+		}
+	th {
+	     background-color: rgb(0,191,255);   
+		}
+	td {
+	     background-color: yellow;   
+		}
+	</style>
+</head>
+<body>
+	<h1>Vote Eligibility Checking (24B11CS002)</h1>
+
+	<button onclick="checkvoter()">Eligibility Check </button>
+
+	<div id="result"></div>
+<script>	
+	function checkvoter()
+	{
+	   const name=prompt("Enter your name  ");
+	   const age=prompt("Enter your age  ");  
+	
+      
+	if (name===null || age===null || name.trim()==="" || isNaN(age))
+	{
+	  alert("Invalid Input , please try again late");
+	  return;
+	}
+	
+	const ageNum= parseInt(age);
+	const eligibility= age>=18 ? "Eligible to vote" : "Not Eligible to vote";
+
+	const tableHTML =`
+	      <table>
+	          <tr>
+		     <th>Name</th>
+		     <th>Age</th>
+		     <th>Eligibility</th>
+	          </tr>
+	          <tr>
+		     <td>${name}</td>
+		     <td>${ageNum}</td>
+		     <td>${eligibility}</td>
+	          </tr>
+		</table>`;
+	document.getElementById("result").innerHTML= tableHTML;
+}
+</script>
+</body>
+</html>

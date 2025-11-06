@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>7B</title>
+ </head>
+<body>
+ 
+	<h1 >Window Object Demo(24B11CS002)</h1>
+        <button onclick="showWindowInfo()">Show window Info</button>
+        <button onclick="openNewWindow()">Open New Window</button>
+        <button onclick="closeNewWindow()">Close New Window</button>
+
+        <div id="output"></div>
+ 
+	<Script>
+	
+		let newWin;
+ 		function showWindowInfo() {
+            
+		let width= window.innerWidth;
+		let height= window.innerHeight;
+		let locationHref= window.location.href;
+		
+
+		document.getElementById("output").innerHTML=
+
+		"Window Width : " + width + "px<br>" +
+		"Window Height : " + height + "px<br>" +
+		"Current URL : " + locationHref   ;
+		
+		}
+
+		function openNewWindow() {
+            
+		newWin=window.open("http://ww.google.com", "Google", "width=1536 , height=695")
+				
+		}
+
+		function closeNewWindow() {
+            
+		if(newWin)
+		{
+			newWin.close();
+		}
+				
+		}
+	</script>
+</body>
+</html>

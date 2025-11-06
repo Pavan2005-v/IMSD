@@ -1,0 +1,29 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<title>String Objects</title>
+</head>
+<body>
+<h1 style="text-align:center">String objects and Properties</h1>
+<p id="output"></p>
+<script>
+let text=" Java objects and examples";
+let length=text.length;
+let upper=text.toUpperCase();
+let lower=text.toLowerCase();
+let sliced=text.slice(6,16);
+let trimmed=text.trim();
+let index=text.indexOf("Java");
+let replaced=text.replace("objects","programming");
+document.getElementById("output").innerHTML=
+"<b>Original string:</b>"+text+"<br>"+
+"<b>Length:</b>"+length+"<br>"+
+"<b>Lower case:</b>"+lower+"<br>"+
+"<b>Upper case:</b>"+upper+"<br>"+
+"<b>Sliced:</b>"+sliced+"<br>"+
+"<b>Trimmed:</b>"+trimmed+"<br>"+
+"<b>Index:</b>"+index+"<br>"+
+"<b>Replace:</b>"+replaced+"<br>"
+</script>
+</body>
+</html>

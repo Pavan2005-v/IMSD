@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fixed Tilted Background (Horizontal Rotate)</title>
+  <style>
+    body {
+      min-height: 300vh; /* make page scrollable */
+      margin: 0;
+      font-family: system-ui, Arial, sans-serif;
+    }
+
+    .tilted-bg {
+      position: fixed;
+      left: 50%;
+      top: 50vh;
+      transform: translate(-50%, -50%) rotate(-12deg);
+      width: 60vw;
+      height: 40vh;
+      background-image: url("386741.jpg"); /* put image in same folder */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      pointer-events: none;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      z-index: 9999;
+      opacity: 0.95;
+      will-change: transform;
+    }
+
+    main {
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="tilted-bg" aria-hidden="true"></div>
+  <main>
+    <h1>Page Content</h1>
+    <p>Scroll to see the tilted background remain fixed halfway down the viewport.</p>
+    <p>Adjust <code>width</code>, <code>height</code>, and rotation angle in the CSS as needed.</p>
+    <p style="margin-top:140vh">This line is roughly below the fold to show scrolling.</p>
+  </main>
+</body>
+</html>

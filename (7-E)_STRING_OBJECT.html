@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Object Example </title>
+</head>
+<body>
+    <h2>String Object Example (24B11CS002)</h2>
+    <p id="output"></p>
+
+    <script>
+        // Create a String
+        let text = "Hello javaScript World!!";
+        let length = text.length;
+
+        // String object methods
+        let upper = text.toUpperCase();
+        let lower = text.toLowerCase();
+        let trimmed = text.trim();
+        let sliced = text.slice(6,16);
+        let replaced = text.replace("World","Programmers");
+        let charAtPos = text.charAt(7);
+        let index = text.indexOf("javaScript");
+        let splitted = text.trim().split(" ");
+        
+
+        // Display results
+        document.getElementById("output").innerHTML =
+            "<b>Original String:</b> " + text + "<br>" +
+            "<b>Length:</b> " + length + "<br>" +
+            "<b>Uppercase:</b> " + upper + "<br>" +
+            "<b>Lowercase:</b> " + lower + "<br>" +
+	    "<b>Trimmed:</b> " + trimmed + "<br>" +
+	    "<b>Sliced (6,16):</b> " + sliced + "<br>" +
+	    "<b>Replaced:</b> " + replaced + "<br>" +
+	    "<b>Character at 7:</b> " + charAtPos + "<br>" +
+	    "<b>Index of javaScript:</b> " + index + "<br>" +
+	    "<b>Splitted:</b> " + splitted.join(", ");   
+    </script>
+</body>
+</html>

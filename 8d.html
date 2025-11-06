@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Iterate object in JavaScript</title>
+<script>
+function displayObjectData() {
+    const person = {
+        name: "Ram",
+        age: 25,
+        city: "Hyderabad"
+    };
+
+    let output = "24B11CS002 <br>"
+    // Using for-in (loops over keys)
+    output += "<h3>Using for-in loop:</h3>";
+    for (let key in person) {
+        output += key + ": " + person[key] + "<br>";
+    }
+
+    // Using forEach (on Object.keys)
+    output += "<h3>Using forEach loop:</h3>";
+    Object.keys(person).forEach(function(key) {
+        output += key + ": " + person[key] + "<br>";
+    });
+
+    // Using for-of (on Object.entries)
+    output += "<h3>Using for-of loop:</h3>";
+    for (let [key, value] of Object.entries(person)) {
+        output += key + ": " + value + "<br>";
+    }
+
+    document.getElementById("result").innerHTML = output;
+}
+</script>
+</head>
+<body onload="displayObjectData()">
+<h2 style="text-align:center;">Display object data using loops</h2>
+<div id="result" style="margin:20px; font-family:Arial; font-size:16px;"></div>
+</body>
+</html>

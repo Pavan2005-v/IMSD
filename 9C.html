@@ -1,0 +1,78 @@
+<html>
+<head>
+	<title>9C</title>
+	<script type="text/javascript">
+		//Validation for fields
+		function validation(){
+			var nm=document.getElementById("name_id").value;
+			var em=document.getElementById("email_id").value;
+			var mo=document.getElementById("phone").value;
+			if(nm=="" && em==""  && mo=="")
+			{
+				alert("Please enter all fields");
+				return false;
+			}			
+			else if(nm=="")
+			{
+				alert("Enter Name");
+				return false;
+			}
+			else if(nm.length<6)
+			{
+				alert("Name should not be below 6 character");
+				return false;
+			}
+			else if(em=="")
+			{
+				alert("Enter Email");
+				return false;
+			}
+			else if(!/^[A-z0-9]{10,}[@][A-z]{16,16}[.][A-z]{2}$/.test(em))
+			{
+				alert("Enter valid Email ID");
+				return false;
+			}
+			else if(mo=="")
+			{
+				alert("Enter mobile number");
+				return false;
+			}
+			else if(!/^\d{10}$/.test(mo))
+			{
+				alert(" mobile number should contain exactly 10 digits");
+				return false;
+			}
+			else{
+				alert(" Form submitted successfully");
+				return true;
+			}
+			
+		}
+		
+	</script>
+</head>
+<form onSubmit="validation()" >
+	<table align="center">
+		<tr>
+			<td colspan="2"><h2>Registration</h2></td>
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td><input type="text" name="name" id="name_id"/></td>
+		</tr>
+		<tr>
+			<td>Email ID</td>
+			<td><input type="text" name="email" id="email_id" /></td>
+		</tr>
+		<tr>
+			<td>Phone number</td>
+			<td><input type="text" name="phone" id="phone" /></td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td><input type="submit" value="SUBMIT" /><input type="reset" value="CLEAR" /></td>
+		</tr>
+	</table>
+</form>
+</html>

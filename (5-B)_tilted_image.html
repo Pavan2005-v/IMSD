@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Fixed tilted Background (horizontal rotate)</title>
+	
+	<style>
+		/* container content so you can scroll the page */
+		body {
+			min-height: 300vh; /* make page scrollable to test fixed behaviour */
+			margin: 0;
+			font-family: system-ui, Arial, sans-serif;
+		}
+
+		/* fixed background image element */
+		.tilted-bg {
+			position: fixed;
+			left: 50%;	/* center horizontally */
+			top: 50vh;	/* halfway down the viewport */
+			transform: translate(-50%, -50%) rotate( -12deg); /* translate to center, then rotate; translate(0) triggers GPU */
+			width: 60vw;
+			height: 40vh;
+			background-image: url("386741.jpg");
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			pointer-events: none; /* so it won't block clicks */
+			border-radius: 12px;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+			z-index: 9999;
+			opacity: 0.95;
+			will-change: transform;
+			
+		}
+		
+		/* Sample page content */
+	 	main {
+			padding: 2rem;	
+		}
+
+		
+	</style>
+    
+</head>
+<body >
+	
+	<div class="tilted-bg" aria-hidden="true"></div>
+
+	<main>
+		<h1> Page Content (24B11CS002) </h1>
+		<p> Scroll to see the tilted background remain fixed halfway down the viewport. </p>
+		<p> Adjust <code>width</code>, <code>height</code>, and rotation angle in the CSS as needed . </p>
+		<!-- Add content to scroll -->
+		<p style="margin-top:140vh"> This line is roughly below the fold to show scrolling. </p>
+	</main>
+</body>
+</html>

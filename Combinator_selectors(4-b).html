@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Combinator SELECTORS</title>
+	
+	<style>
+		/* Descendent selector (space)*/
+		div p {
+			color: green;
+			font-size: 16px;
+		}
+
+		/* child selector (>)*/
+		div > ul {
+			background-color: #f0f0f0;
+			padding: 10px;
+		}
+
+		/* Adjacent sibling selector (+)*/
+		h2 + p {
+			color: blue;
+			font-style: italic;
+		}
+
+		/* General sibling selector (+)*/
+		h3 ~ p {
+			color: red;
+			text-decoration: underline;
+		}
+
+	</style>
+    
+</head>
+<body >
+	
+	<h1>Combinator selectors Demo (24B11CS002)</h1>
+
+	<div>
+		<p> This is a descendant of div (styled using descendant selector).</p>
+		<section>
+
+		<p > This is a nested deeper inside div(still a descendant) .</p>
+		</section>
+
+		<ul>
+			<li>Child of div - styled with child sector </li>
+			<li>Another list item </li>
+		</ul>
+	</div>
+
+	<h2>Heading 2</h2>
+		<p> This is an adjacent sibling of h2  (styled using + selector).</p>
+		<p> This is NOT adjacent to h2 .</p>
+	<h3>Heading 3</h3>
+		<p> This is a general sibling of h3  (styled using ~ selector).</p>
+		<p> Another general sibling of h3 .</p>
+
+</body>
+</html>

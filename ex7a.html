@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document Object Example</title>
+</head>
+<body>
+<h2>Document Object Demo</h2>
+
+<p id="info"></p>
+
+<script>
+    // Accessing document properties
+    document.write("<b>Title:</b> " + document.title + "<br>");
+    document.write("<b>URL:</b> " + document.URL + "<br>");
+    document.write("<b>Domain:</b> " + document.domain + "<br><br>");
+
+    // Using document methods
+    document.getElementById("info").innerHTML = "This text is added using <b>getElementById()</b> method.";
+
+    let newPara = document.createElement("p");         // createElement()
+    newPara.textContent = "This paragraph was created dynamically!";
+    document.body.appendChild(newPara);                // appendChild()
+</script>
+
+</body>
+</html>

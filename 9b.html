@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>Fibonacci and Factorial</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f6fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #2980b9;
+}
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>Number Operations</h2>
+  <input type="number" id="numberInput" placeholder="Enter a number"/>
+  <div>
+    <button onclick="showFactorial()">Factorial</button>
+    <button onclick="showFibonacci()">Fibonacci</button>
+  </div>
+  <div id="result"></div>
+</div>
+
+<script>
+function showFactorial() {
+  const num = parseInt(document.getElementById('numberInput').value);
+  if (isNaN(num) || num < 0) {
+    document.getElementById('result').innerHTML = "Please enter a valid non-negative number";
+    return;
+  }
+  let fact = 1;
+  for (let i = 1; i <= num; i++) {
+    fact *= i;
+  }
+  document.getElementById('result').innerHTML = `Factorial of ${num} is: ${fact}`;
+}
+
+function showFibonacci() {
+  const num = parseInt(document.getElementById('numberInput').value);
+  if (isNaN(num) || num <= 0) {
+    document.getElementById('result').innerHTML = "Please enter a valid positive number";
+    return;
+  }
+  let fib = [0, 1];
+  for (let i = 2; i < num; i++) {
+    fib[i] = fib[i - 1] + fib[i - 2];
+  }
+  document.getElementById('result').innerHTML =
+    `Fibonacci series up to ${num} terms:<br>${fib.slice(0, num).join(', ')}`;
+}
+</script>
+</body>
+</html>

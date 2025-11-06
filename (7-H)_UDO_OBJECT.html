@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>user-defined object exapmle</title>
+</head>
+<body>
+<h2> User-Defined object in javascript (24B11CS002)</h2>
+<p id="output"></p>
+<script>
+//constructor function to define a user-defined object
+function Student(name,age,marks) {
+//properties
+this.name=name;
+this.age=age;
+this.marks=marks;
+//method
+this.displayDetails=function() {
+return "Name: " + this.name + ", Age: " + this.age + ",Marks: " + this.marks;
+};
+//Accessor(Getter)
+this.getGrade=function(){
+if(this.marks>=90) return "A";
+else if(this.marks>=75) return "B";
+else if(this.marks>=50) return "C";
+else return "Fail";
+};
+
+//Accessor(Setter)
+this.setMarks=function(newMarks){
+this.marks=newMarks;
+};
+}
+//create object using constructor
+let student1=new Student("Ram",20,85);
+//use setter to update marks
+student1.setMarks(92);
+//Display details and grade
+document.getElementById("output").innerHTML=
+student1.displayDetails()+ "<br>" +
+"Grade: " + student1.getGrade();
+</script>
+</body>
+</html>

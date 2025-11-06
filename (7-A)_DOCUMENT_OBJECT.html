@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>7A</title>
+ </head>
+<body>
+ 
+	<h1 id="heading">Hello World(24B11CS002)</h1>
+	<p> This is a demo of document object </p>
+        <button onclick="showInfo()">Show Document Info</button>
+        <div id="output"></div>
+ 
+	<Script>
+ 		function showInfo() {
+            
+		let title= document.title;
+		let url= document.URL;
+		let lastModified= document.ladtModified;
+		
+		document.getElementById("heading").style.color="blue";
+
+		document.getElementById("output").innerHTML=
+
+		"Title : " + title + "<br>" +
+		"URL : " + url + "<br>" +
+		"Last Modified : " + lastModified   ;
+		
+		}
+	</script>
+</body>
+</html>

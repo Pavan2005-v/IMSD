@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Pseudo - class SELECTORS</title>
+	
+	<style>
+		/* :hover  when mouse id over the element*/
+		a:hover {
+			color: red;
+			text-decoration: underline;
+		}
+
+		/* :first - child- targets the first child element*/
+		ul li:first-child {
+			color: green;
+			font-weight: bold;
+		}
+
+		/* :last - child- targets the last child element*/
+		ul li:last-child {
+			color: blue;
+			font-style: italic;
+		}
+
+
+		/* :nth - child(n)- targets the nth child */
+		ul li:nth-child(2) {
+			background-color: #ffffcc;
+		}
+		
+		/* :focus - applies when input is focused */
+		input:focus {
+			border: 2px solid orange;
+			outline: none;
+		}
+
+		/* :checked - when check box is selected */
+		input[type="checkbox"]:checked + label {
+			color: darkblue;
+			font-weight: bold;
+		}
+
+		/* :visited - visited links */
+		a:visited {
+			color: purple;
+		}
+
+	</style>
+    
+</head>
+<body >
+	
+	<h1>Pseudo class selectors Demo (24B11CS002)</h1>	
+
+	<a href="https://www.codechef.com/users/abhinay_002" target="_blank">Hover or Visit Me</a>				
+
+	<ul>
+		<li>First item </li>
+		<li>Second item </li>
+		<li>Third item </li>
+		<li>Last item </li>
+	</ul>
+
+	<form>
+		<p>
+			<label for="name">Name:</label>
+			<input type="text" id="name" placeholder="Type your name">
+		</p>
+
+		<p>
+			<input type="checkbox" id="agree" >
+			<label for="agree">I agree to the terms:</label>
+		</p>
+	</form>
+</body>
+</html>

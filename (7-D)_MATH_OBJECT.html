@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Math Object Example</title>
+</head>
+<body>
+	<h2>Math Object Example(24B11CS002)</h2>
+	<p id="output"></p>
+
+	<script>
+		// Math Object Properties
+		let pivalue = Math.PI;
+		let evalue = Math.E;
+		let sqrt2Value = Math.SQRT2;
+
+		let sqrtResult= Math.sqrt(16);
+		let powerResult= Math.pow(2,5);
+		let absResult= Math.abs(-25);
+		let roundResult= Math.round(4.7);
+		let ceilResult= Math.ceil(4.2);
+		let floorResult= Math.floor(4.8);
+		let randomResult= Math.random();
+		let maxResult= Math.max(3,9,2,15,7);
+		let minResult= Math.min(3,9,2,15,7);
+
+		document.getElementById("output").innerHTML=
+
+		"<b> PROPERTIES  :</b> <br> "  + 
+		" PI  : " + pivalue + "<br>" +
+		" E  : " + evalue + "<br>" +
+		" SQRT2  : " + sqrt2Value + "<br>" +
+
+		"<b> METHODS  :</b> "  + "<br>" +
+		"<b> Square root of 16  :</b> " + sqrtResult + "<br>" +
+		"<b> 2^5 (power)  :</b> " + powerResult + "<br>" +
+		"<b> Absolute of -25  :</b> " + absResult + "<br>" +
+		"<b> Round (4.7)  :</b> " + roundResult + "<br>" +
+		"<b> Ceil (4.2)  :</b> " + ceilResult + "<br>" +
+		"<b> Floor (4.8)  :</b> " + floorResult + "<br>" +
+		"<b> Random number (0-1)  :</b> " + randomResult + "<br>" +
+		"<b> Maximum number  :</b> " + maxResult + "<br>" +
+		"<b> Minimum number  :</b> " + minResult  ;
+	</script>
+</body>
+</html>
